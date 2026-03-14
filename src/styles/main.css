@@ -1,0 +1,54 @@
+@font-face {
+   font-family: 'Inter';
+   src: url('./fonts/Inter-VariableFont.ttf') format('truetype');
+}
+
+:root {
+   --soft-orange: hsl(35, 77%, 62%);
+   --soft-red: hsl(5, 85%, 63%);
+   --off-white: hsl(36, 100%, 99%);
+   --grayish-blue: hsl(233, 8%, 79%);
+   --dark-grayish-blue: hsl(236, 13%, 42%);
+   --very-dark-blue: hsl(240, 100%, 5%);
+
+   --font-regular: 400;
+   --font-bolder: 700;
+   --font-bold: 800;
+
+   --max-width: 42rem
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Inter', sans-serif;
+   font-size: clamp(1rem, 1vw, 1.1rem);
+   font-weight: var(--font-regular);
+   min-height: 100dvh;
+   display: flex;
+   flex-direction: column;
+}
+
+h1 {
+   font-weight: var(--font-bold);
+   font-size: 2.5rem;
+}
+
+header {
+
+}
+
+main{
+   flex-grow: 1;
+}
+
+footer {
+   font-size: 0.8rem;
+   max-width: var(--max-width);
+   margin: 0 auto;
+
+}

@@ -7,13 +7,13 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 ## Table of contents
 
 - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
+   - [The challenge](#the-challenge)
+   - [Screenshot](#screenshot)
+   - [Links](#links)
 - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
+   - [Built with](#built-with)
+   - [What I learned](#what-i-learned)
+   - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
+- Solution URL: https://github.com/FJSolutions/fm-news-homepage/
 - Live Site URL:
 
 ## My process
@@ -68,13 +68,13 @@ To see how you can add code snippets, see below:
 
 ```css
 .proud-of-this-css {
-  color: papayawhip;
+   color: papayawhip;
 }
 ```
 
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
+   console.log('🎉')
 }
 ```
 

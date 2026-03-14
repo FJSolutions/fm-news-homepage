@@ -82,10 +82,6 @@ Our best picks for various needs and budgets.
 The Growth of Gaming
 How the pandemic has sparked fresh opportunities.
 
-<div class="attribution">
-   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-   Mentor</a>.
-   Coded by <a href="#">Your Name Here</a>.
-</div>
+
 </body>
 ```

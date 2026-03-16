@@ -1,0 +1,85 @@
+---
+
+---
+
+
+<section role="banner">
+   <img
+       src="/images/image-web-3-mobile.jpg"
+       srcset="/images/image-web-3-mobile.jpg 686w, /images/image-web-3-desktop.jpg 1460w"
+       sizes="(width <= 32rem) 686px,
+               1460px"
+       fetchpriority="high"
+       alt="Web 3.0 banner"/>
+
+   <h1>The Bright Future of Web 3.0?</h1>
+
+   <div>
+      <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+         of the people.But is it really fulfilling its promise?</p>
+
+      <button type="button">Read more</button>
+   </div>
+</section>
+
+<style>
+   @import "../styles/media.css";
+
+   [role="banner"] {
+      display: grid;
+      gap: 1.5rem;
+   }
+
+   img {
+      grid-area: banner;
+      width: 100%;
+   }
+
+   h1 {
+      grid-area: title;
+      font-size: 3rem;
+      font-weight: var(--font-bold);
+   }
+
+   div {
+      grid-area: content;
+   }
+
+   p {
+      line-height: 1.5rem;
+      color: var(--dark-grayish-blue);
+   }
+
+   button {
+      font-size: 1.05rem;
+      background-color: var(--soft-red);
+      color: var(--very-dark-blue);
+      padding: 1rem 2rem;
+      border: none;
+      margin-block-start: 2rem;
+      letter-spacing: 0.25rem;
+      font-weight: var(--font-bolder);
+   }
+
+   button:hover {
+      background-color: var(--very-dark-blue);
+      color: var(--off-white);
+      cursor: pointer;
+   }
+
+   @media (--mobile) {
+      section {
+         grid-template-areas: "banner" "title" "content";
+         grid-template-columns: auto;
+         grid-template-rows: repeat(3, auto);
+      }
+   }
+
+   @media (--desktop) {
+      section {
+         grid-template-areas: "banner banner" "title content";
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+      }
+   }
+</style>

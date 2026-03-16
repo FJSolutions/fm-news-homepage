@@ -9,8 +9,11 @@ export default defineConfig({
       css: {
          transformer: 'lightningcss',
          lightningcss: {
-            targets: browserslistToTargets(browserslist('defaults')),
             cssModules: true,
+            drafts: {
+               customMedia: true, // Enable custom media queries
+            },
+            targets: browserslistToTargets(browserslist('defaults')),
          },
       },
       build: {

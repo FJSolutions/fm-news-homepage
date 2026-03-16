@@ -1,7 +1,7 @@
 ---
 import "../styles/main.css"
-import Nav from "../components/nav.astro"
-import Footer from "../components/footer.astro"
+import Nav from "../components/Nav.astro"
+import Footer from "../components/Footer.astro"
 
 const {title} = Astro.props
 ---
@@ -17,7 +17,7 @@ const {title} = Astro.props
 </head>
 <body>
 <header>
-   <Nav/>
+   <Nav title={title}/>
 </header>
 <main>
    <slot/>

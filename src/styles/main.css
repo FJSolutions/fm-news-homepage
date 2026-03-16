@@ -1,6 +1,8 @@
+@import "./media.css";
+
 @font-face {
    font-family: 'Inter';
-   src: url('./fonts/Inter-VariableFont.ttf') format('truetype');
+   src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
 }
 
 :root {
@@ -15,7 +17,8 @@
    --font-bolder: 700;
    --font-bold: 800;
 
-   --max-width: 42rem
+   --max-width: 66rem;
+
 }
 
 * {
@@ -26,29 +29,74 @@
 
 body {
    font-family: 'Inter', sans-serif;
-   font-size: clamp(1rem, 1vw, 1.1rem);
+   font-size: clamp(0.9rem, 1vw, 1.1rem);
    font-weight: var(--font-regular);
    min-height: 100dvh;
    display: flex;
    flex-direction: column;
-}
-
-h1 {
-   font-weight: var(--font-bold);
-   font-size: 2.5rem;
+   margin: 1rem;
 }
 
 header {
-
+   max-width: var(--max-width);
+   margin: 0 auto;
+   width: 100%;
 }
 
-main{
+main {
    flex-grow: 1;
+   display: grid;
+   column-gap: 2rem;
+   row-gap: 4rem;
+   width: 100%;
+   max-width: var(--max-width);
+   margin: 0 auto;
+}
+
+section[role="banner"] {
+   grid-area: banner;
+}
+
+aside.main-aside {
+   grid-area: aside;
+}
+
+section[role="feed"] {
+   grid-area: feed;
 }
 
 footer {
    font-size: 0.8rem;
    max-width: var(--max-width);
+   padding-block-start: 2rem;
    margin: 0 auto;
+   text-align: center;
+}
 
+.no-scroll {
+   overflow: hidden;
+}
+
+/* Mobile screen */
+@media screen and (--mobile) {
+   header{
+      margin-block-start: 0.5rem;
+   }
+   main {
+      grid-template-areas: "banner" "aside" "feed";
+      grid-template-rows: auto auto 1fr;
+      grid-template-columns: auto;
+   }
+}
+
+/* Desktop screen */
+@media screen and (--desktop) {
+   header {
+      margin-block-start: 2rem;
+   }
+   main {
+      grid-template-areas: "banner aside" "feed feed";
+      grid-template-rows: auto auto 1fr;
+      grid-template-columns: 2fr 1fr;
+   }
 }

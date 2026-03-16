@@ -14,9 +14,6 @@ importers:
       astro:
         specifier: ^6.0.4
         version: 6.0.4(lightningcss@1.32.0)(rollup@4.59.0)
-      preact:
-        specifier: ^10.29.0
-        version: 10.29.0
     devDependencies:
       browserslist:
         specifier: ^4.28.1

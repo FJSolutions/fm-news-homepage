@@ -15,8 +15,7 @@
    "packageManager": "pnpm@10.27.0",
    "dependencies": {
       "@astrojs/preact": "^5.0.0",
-      "astro": "^6.0.4",
-      "preact": "^10.29.0"
+      "astro": "^6.0.4"
    },
    "devDependencies": {
       "browserslist": "^4.28.1",

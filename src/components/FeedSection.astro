@@ -1,33 +1,23 @@
 ---
+import { getCollection } from "astro:content";
 
+const feedItems = await getCollection("feedItems");
 ---
 
 <section role="feed">
    <ul>
-      <li>
-         <img src="/images/image-retro-pcs.jpg" alt="Reviving Retro PCs" width="121" height="154"/>
-         <div>
-            <p class="counter">01</p>
-            <h3><a href="#">Reviving Retro PCs</a></h3>
-            <p>What happens when old PCs are given modern upgrades?</p>
-         </div>
-      </li>
-      <li>
-         <img src="/images/image-top-laptops.jpg" alt="Top 10 Laptops of 2022" width="121" height="154"/>
-         <div>
-            <p class="counter">02</p>
-            <h3><a href="#">Top 10 Laptops of 2022</a></h3>
-            <p>Our best picks for various needs and budgets.</p>
-         </div>
-      </li>
-      <li>
-         <img src="/images/image-gaming-growth.jpg" alt="The Growth of Gaming" width="121" height="154"/>
-         <div>
-            <p class="counter">03</p>
-            <h3><a href="#">The Growth of Gaming</a></h3>
-            <p>How the pandemic has sparked fresh opportunities.</p>
-         </div>
-      </li>
+      {feedItems.map(({data}) => {
+         return (
+             <li>
+                <img src={data.img} alt={data.title} width="121" height="154"/>
+                <div>
+                   <p class="counter">{data.counter.toString().padStart(2, '0')}</p>
+                   <h3><a href="#">{data.title}</a></h3>
+                   <p>{data.description}</p>
+                </div>
+             </li>
+         )
+      })}
    </ul>
 </section>
 

@@ -51,6 +51,10 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ### What I learned
 
+I implemented the News aside and Feed content using Astro collections. After a bit of reading documentation (as all the
+web resources were out of date) it worked well and looked much cleaner. I did not have the same joy when trying to use
+the `astro` Image and Picture components and eventually went back to standard `html` markdown.
+
 Writing the mobile Nav component from scratch was a treat - first time I have done it completely from scratch and while
 it can be improved with some animations, it is functionally adequate for the project. It is also fully accessible.
 
@@ -98,8 +102,6 @@ media queries in a separate them into the main CSS file and each component that 
 ### Continued development
 
 This page (and the site that springs from it) needs database backend and a server to serve dynamic content.
-
-Alternatively, I may revisit the project and retrofit it with Astro content collections.
 
 ## Author
 
